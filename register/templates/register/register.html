@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+
+{% block title-content %}
+  <div class="page-header">
+    <h1>Register</h1>
+  </div>
+{% endblock %}
+
+{% block body-content %}
+
+<table class="table">
+    <tr>
+        <td><b></b></td>
+        <td><b>Nombre</b></td>
+        <td><b>Apellido</b></td>
+        <td><b>Acerca de el</b></td>
+    </tr>
+    {% for person in list %}
+    <tr>
+        <td>{{ person.id }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.lastname }}</td>
+        <td>{{ person.about }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/register/form_register/">Nuevo registro</a>
+
+{% endblock %}

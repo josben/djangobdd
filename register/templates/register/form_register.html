@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+
+{% block title-content %}
+  <div class="page-header">
+    <h1>Register Form</h1>
+  </div>
+{% endblock %}
+
+{% block body-content %}
+
+<form action="/register/form_register/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+</form>
+<a href="/register/">Registros</a>
+{% endblock %}
