@@ -71,6 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djangobdd.wsgi.application'
 
+TEST_RUNNER = 'django_behave.runner.DjangoBehaveTestSuiteRunner'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
